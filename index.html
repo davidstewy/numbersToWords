@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        const hundos = ["", "One-hundred", "Two-hundred", "Three-hundred", "Four-hundred", "Five-hundred",
+            "Six-hundred", "Seven-hundred", "Eight-hundred", "Nine-hundred"];
+
+        const tens = ["", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+
+        const ones = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+
+        const teens = ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen",
+            "nineteen"];
+
+
+
+        let result = "";
+
+        for (let h = 0; h < hundos.length; h++) {
+            for (let t = 0; t < tens.length; t++) {
+
+
+                for (let o = 0; o < ones.length; o++) {
+                    if (t == 1) {
+                        result += [hundos[h] + " " + teens[t] + " "];
+                    }
+                    else{
+                        result += [hundos[h] + " " + tens[t] + " " + ones[o] + " "];
+                }
+            }
+        }
+}
+
+        document.write(result);
+        document.write("One Thousand");
+    </script>
+
+</body>
+
+</html>

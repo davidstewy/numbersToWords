@@ -13,34 +13,34 @@
 
 
     <script>
-        const hundos = ["", "One-hundred", "Two-hundred", "Three-hundred", "Four-hundred", "Five-hundred",
+        const hundos = [" ", "One-hundred", "Two-hundred", "Three-hundred", "Four-hundred", "Five-hundred",
             "Six-hundred", "Seven-hundred", "Eight-hundred", "Nine-hundred"];
 
-        const tens = ["", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+        const tens = [" ", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
 
-        const ones = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+        const ones = [" ", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
 
         const teens = ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen",
             "nineteen"];
 
 
 
-        let result = "";
+        let result = " ";
 
-        for (let h = 0; h < hundos.length; h++) {
-            for (let t = 0; t < tens.length; t++) {
+        for (let h = 0; h < 10; h++) {
+            for (let t = 0; t < 10; t++) {
 
 
-                for (let o = 0; o < ones.length; o++) {
+                for (let o = 0; o < 10; o++) {
                     if (t == 1) {
                         result += [hundos[h] + " " + teens[t] + " "];
                     }
-                    else{
+                    
                         result += [hundos[h] + " " + tens[t] + " " + ones[o] + " "];
-                }
-            }
-        }
-}
+                
+            };
+        };
+        };
 
         document.write(result);
         document.write("One Thousand");

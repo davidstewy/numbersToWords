@@ -25,25 +25,30 @@
 
 
 
-        let result = " ";
+        
 
-        for (let h = 0; h < 10; h++) {
-            for (let t = 0; t < 10; t++) {
+        for (let h = 0; h < hundos.length; h++) {
+            for (let t = 0; t < tens.length; t++) {
 
 
-                for (let o = 0; o < 10; o++) {
+                for (let o = 0; o < ones.length; o++) {
                     if (t == 1) {
-                        result += [hundos[h] + " " + teens[t] + " "];
+                    let newDiv = document.createElement("div");
+                    newDiv.textContent = [hundos[h] + " " + teens[o] +  " "];
+                    document.body.appendChild(newDiv);
                     }
-                    
-                        result += [hundos[h] + " " + tens[t] + " " + ones[o] + " "];
+                    else{
+                    let newDiv = document.createElement("div");
+                    newDiv.textContent = [hundos[h] + " " + tens[t] + " " + ones[o] + " "];
+                    document.body.appendChild(newDiv);
+                    }
                 
-            };
-        };
-        };
+                     }
+                 }
+        }
 
-        document.write(result);
-        document.write("One Thousand");
+    
+        document.write("<strong>One Thousand!!</strong>");
     </script>
 
 </body>
